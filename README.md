@@ -69,7 +69,6 @@ print(f"Model: {response}\n")
 healthcare_questions = [
 "What are the most common symptoms of diabetes?",
 "How does hypertension affect the body?",
-# ... add more questions as needed
 ]
 
 for question in healthcare_questions:
