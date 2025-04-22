@@ -28,15 +28,12 @@ After training, save your model:
 model.save_pretrained("fine_tuned_model")
 tokenizer.save_pretrained("fine_tuned_model")
 
-text
-
 Load for inference:
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model = AutoModelForCausalLM.from_pretrained("fine_tuned_model", local_files_only=True)
 tokenizer = AutoTokenizer.from_pretrained("fine_tuned_model", local_files_only=True)
 
-text
 
 ### 3. Interactive Prompting
 
@@ -67,8 +64,6 @@ if "Response:" in response:
 response = response.split("Response:")[-1].strip()
 print(f"Model: {response}\n")
 
-text
-
 ### 4. Batch Inference Example
 
 healthcare_questions = [
@@ -95,9 +90,6 @@ response = response.split("Response:")[-1].strip()
 print(f"Q: {question}\nA: {response}\n")
 
 
-## Example Healthcare Questions
-
-See [`healthcare_questions.py`](healthcare_questions.py) for a sample list.
 
 ## Evaluation
 
